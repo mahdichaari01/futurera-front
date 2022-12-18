@@ -8,6 +8,7 @@ import WalletInfo from "./components/WalletInfo";
 import Home from "./pages/Home";
 import MintFutures from "./pages/MintFutures";
 import Risks from "./pages/Risks";
+import placeholder from "./assets/placeholder.png";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 const SM: {
   name: "facebook" | "twitter" | "instagram" | "discord";
@@ -35,7 +36,9 @@ function App() {
         )}
       </header>
       <main className="grid grid-cols-1 md:grid-cols-[1fr,34rem,1fr] w-full h-full place-items-center">
-        <div></div>
+        <div className="max-md:hidden text-white w-full">
+          <img className="object-contain w-full" src={placeholder} />
+        </div>
         <div className="w-full max-w-lg">
           <WidgetContainer>
             <BrowserRouter>
@@ -52,7 +55,9 @@ function App() {
             ))}
           </ul>
         </div>
-        <div></div>
+        <div className="text-white w-full">
+          <img className="object-contain w-full" src={placeholder} />
+        </div>
       </main>
     </div>
   );
