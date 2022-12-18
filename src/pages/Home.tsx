@@ -6,7 +6,7 @@ export default function Home() {
       <img src={logo} className="h-7" />
       <div className="sm:text-2xl text-xl font-bold">Free Mint</div>
       <div className="w-full flex flex-col gap-2 font-bold sm:text-2xl text-xl">
-        Price:
+        Price :
         <hr className="w-full" />
         <div className="sm:text-3xl text-2xl">0.08 ETH</div>
       </div>
