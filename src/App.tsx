@@ -22,8 +22,8 @@ const SM: {
 function App() {
   const connection = useContext(WalletConnection);
   return (
-    <div className="App bg-back p-9 min-h-screen">
-      <header className="flex justify-center md:justify-between flex-row items-center w-full">
+    <div className="App bg-back p-9 min-h-screen grid grid-rows-[min-content,100%]">
+      <header className="flex justify-center md:justify-between flex-row items-center h-fit">
         <img src={logo} className="h-6 md:block hidden" />
         {connection.loggedIn ? (
           <WalletInfo />
@@ -35,7 +35,8 @@ function App() {
           </div>
         )}
       </header>
-      <main className="grid grid-cols-1 md:grid-cols-[1fr,34rem,1fr] w-full h-full place-items-center">
+
+      <main className="grid grid-cols-1 gap-2 md:grid-cols-[1fr,1.5fr,1fr] w-full h-full place-items-center mt-4">
         <div className="max-md:hidden text-white w-full">
           <img className="object-contain w-full" src={placeholder} />
         </div>
